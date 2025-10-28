@@ -34,6 +34,10 @@ def test_register():
 
     time.sleep(1)
 
+    campoNome.send_keys("Renato e Miguel")
+    time.sleep(3)
+    campoNome.clear()
+    time.sleep(3)
     campoNome.send_keys("Leonardo Oliveira")
     campoEmail.send_keys("LeoOliveiraBlox@gmail.com")
 
@@ -70,6 +74,7 @@ def test_register():
 
     time.sleep(5)
     
+    
 
 def test_login():
     
@@ -90,5 +95,5 @@ def test_login():
         print('Não foi possível logar no sistema, verifique o email ou a senha')
 
 
-#test_register()
-#test_login()
+# test_register()
+test_login()
