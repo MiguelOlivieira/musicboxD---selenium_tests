@@ -14,4 +14,17 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 # Abrir a pagina da apliccacao
 driver.get(caminho_servidor)
 
-time.sleep(10)
+time.sleep(5)
+
+                                        #Nota: o xpath permite  localizar pontos específicos do documento HTML com “endereços“
+usuarioNome = driver.find_element(By.XPATH, "//input[@placeholder='Digite aqui seu nome completo']")
+usuarioEmail = driver.find_element(By.XPATH, "//input[@placeholder='Digite aqui seu Email cadastrado']")
+
+time.sleep(1)
+
+
+
+usuarioNome.send_keys("Leonardo Oliveira")
+usuarioEmail.send_keys("LeoOliveiraBlox@gmail.com")
+
+time.sleep(3)
