@@ -24,6 +24,8 @@ time.sleep(2)
 
 if driver.current_url != caminho_pesquisar:
     print("Erro: Não navegou para a página de pesquisa corretamente.")
+else:
+    print("Navegação para a página de pesquisar bem-sucedida.")
 
 # 3. Clica no elemento "em alta"
 driver.find_element(By.ID, "emAlta").click()
@@ -31,13 +33,17 @@ time.sleep(2)
 
 if driver.current_url != caminho_emAlta:
     print("Erro: Não navegou para a página de tendências corretamente.")
+else:
+    print("Navegação para a página de em alta bem-sucedida.")
 
 # 4. Clica no elemento "perfil"
 driver.find_element(By.ID, "perfil").click()
 
 if driver.current_url != caminho_perfil:
     print("Erro: Não navegou para a página de perfil corretamente.")
-
+else:
+    print("Navegação para a página de perfil bem-sucedida.")
+    
 # --- Voltando ---
 time.sleep(3)
 
